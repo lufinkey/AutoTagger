@@ -50,5 +50,8 @@
     <ClInclude Include="external\tinyxml2\include\tinyxml2\tinyxml2.h">
       <Filter>external\tinyxml2\include\tinyxml2</Filter>
     </ClInclude>
+    <ClInclude Include="src\AutoTagger\Scraper\Scraper.h">
+      <Filter>src\AutoTagger\Scraper</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

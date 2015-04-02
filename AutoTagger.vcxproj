@@ -19,6 +19,7 @@
     <ClInclude Include="external\tinyxml2\include\tinyxml2\tinyxml2.h" />
     <ClInclude Include="src\AutoTagger\AutoTagger.h" />
     <ClInclude Include="src\AutoTagger\Request\WebRequest.h" />
+    <ClInclude Include="src\AutoTagger\Scraper\Scraper.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{94072E47-ABB0-45CA-82FB-90AAB4C7CDBF}</ProjectGuid>
