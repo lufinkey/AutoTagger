@@ -11,14 +11,95 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="external\tinyxml2\src\tinyxml2.cpp" />
+    <ClCompile Include="external\libxml++\attribute.cc" />
+    <ClCompile Include="external\libxml++\attributedeclaration.cc" />
+    <ClCompile Include="external\libxml++\attributenode.cc" />
+    <ClCompile Include="external\libxml++\document.cc" />
+    <ClCompile Include="external\libxml++\dtd.cc" />
+    <ClCompile Include="external\libxml++\exceptions\exception.cc" />
+    <ClCompile Include="external\libxml++\exceptions\internal_error.cc" />
+    <ClCompile Include="external\libxml++\exceptions\parse_error.cc" />
+    <ClCompile Include="external\libxml++\exceptions\validity_error.cc" />
+    <ClCompile Include="external\libxml++\io\istreamparserinputbuffer.cc" />
+    <ClCompile Include="external\libxml++\io\ostreamoutputbuffer.cc" />
+    <ClCompile Include="external\libxml++\io\outputbuffer.cc" />
+    <ClCompile Include="external\libxml++\io\parserinputbuffer.cc" />
+    <ClCompile Include="external\libxml++\keepblanks.cc" />
+    <ClCompile Include="external\libxml++\nodes\cdatanode.cc" />
+    <ClCompile Include="external\libxml++\nodes\commentnode.cc" />
+    <ClCompile Include="external\libxml++\nodes\contentnode.cc" />
+    <ClCompile Include="external\libxml++\nodes\element.cc" />
+    <ClCompile Include="external\libxml++\nodes\entitydeclaration.cc" />
+    <ClCompile Include="external\libxml++\nodes\entityreference.cc" />
+    <ClCompile Include="external\libxml++\nodes\node.cc" />
+    <ClCompile Include="external\libxml++\nodes\processinginstructionnode.cc" />
+    <ClCompile Include="external\libxml++\nodes\textnode.cc" />
+    <ClCompile Include="external\libxml++\nodes\xincludeend.cc" />
+    <ClCompile Include="external\libxml++\nodes\xincludestart.cc" />
+    <ClCompile Include="external\libxml++\noncopyable.cc" />
+    <ClCompile Include="external\libxml++\parsers\domparser.cc" />
+    <ClCompile Include="external\libxml++\parsers\parser.cc" />
+    <ClCompile Include="external\libxml++\parsers\saxparser.cc" />
+    <ClCompile Include="external\libxml++\parsers\textreader.cc" />
+    <ClCompile Include="external\libxml++\relaxngschema.cc" />
+    <ClCompile Include="external\libxml++\schema.cc" />
+    <ClCompile Include="external\libxml++\schemabase.cc" />
+    <ClCompile Include="external\libxml++\validators\dtdvalidator.cc" />
+    <ClCompile Include="external\libxml++\validators\relaxngvalidator.cc" />
+    <ClCompile Include="external\libxml++\validators\schemavalidator.cc" />
+    <ClCompile Include="external\libxml++\validators\schemavalidatorbase.cc" />
+    <ClCompile Include="external\libxml++\validators\validator.cc" />
+    <ClCompile Include="external\libxml++\validators\xsdvalidator.cc" />
+    <ClCompile Include="external\libxml++\xsdschema.cc" />
     <ClCompile Include="src\AutoTagger\Request\WebRequest.cpp" />
+    <ClCompile Include="src\AutoTagger\Scraper\AppleScraper.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="external\tinyxml2\include\tinyxml2\tinyxml2.h" />
+    <ClInclude Include="external\libxml++\attribute.h" />
+    <ClInclude Include="external\libxml++\attributedeclaration.h" />
+    <ClInclude Include="external\libxml++\attributenode.h" />
+    <ClInclude Include="external\libxml++\document.h" />
+    <ClInclude Include="external\libxml++\dtd.h" />
+    <ClInclude Include="external\libxml++\exceptions\exception.h" />
+    <ClInclude Include="external\libxml++\exceptions\internal_error.h" />
+    <ClInclude Include="external\libxml++\exceptions\parse_error.h" />
+    <ClInclude Include="external\libxml++\exceptions\validity_error.h" />
+    <ClInclude Include="external\libxml++\io\istreamparserinputbuffer.h" />
+    <ClInclude Include="external\libxml++\io\ostreamoutputbuffer.h" />
+    <ClInclude Include="external\libxml++\io\outputbuffer.h" />
+    <ClInclude Include="external\libxml++\io\parserinputbuffer.h" />
+    <ClInclude Include="external\libxml++\keepblanks.h" />
+    <ClInclude Include="external\libxml++\libxml++.h" />
+    <ClInclude Include="external\libxml++\nodes\cdatanode.h" />
+    <ClInclude Include="external\libxml++\nodes\commentnode.h" />
+    <ClInclude Include="external\libxml++\nodes\contentnode.h" />
+    <ClInclude Include="external\libxml++\nodes\element.h" />
+    <ClInclude Include="external\libxml++\nodes\entitydeclaration.h" />
+    <ClInclude Include="external\libxml++\nodes\entityreference.h" />
+    <ClInclude Include="external\libxml++\nodes\node.h" />
+    <ClInclude Include="external\libxml++\nodes\processinginstructionnode.h" />
+    <ClInclude Include="external\libxml++\nodes\textnode.h" />
+    <ClInclude Include="external\libxml++\nodes\xincludeend.h" />
+    <ClInclude Include="external\libxml++\nodes\xincludestart.h" />
+    <ClInclude Include="external\libxml++\noncopyable.h" />
+    <ClInclude Include="external\libxml++\parsers\domparser.h" />
+    <ClInclude Include="external\libxml++\parsers\parser.h" />
+    <ClInclude Include="external\libxml++\parsers\saxparser.h" />
+    <ClInclude Include="external\libxml++\parsers\textreader.h" />
+    <ClInclude Include="external\libxml++\relaxngschema.h" />
+    <ClInclude Include="external\libxml++\schema.h" />
+    <ClInclude Include="external\libxml++\schemabase.h" />
+    <ClInclude Include="external\libxml++\validators\dtdvalidator.h" />
+    <ClInclude Include="external\libxml++\validators\relaxngvalidator.h" />
+    <ClInclude Include="external\libxml++\validators\schemavalidator.h" />
+    <ClInclude Include="external\libxml++\validators\schemavalidatorbase.h" />
+    <ClInclude Include="external\libxml++\validators\validator.h" />
+    <ClInclude Include="external\libxml++\validators\xsdvalidator.h" />
+    <ClInclude Include="external\libxml++\xsdschema.h" />
     <ClInclude Include="src\AutoTagger\AutoTagger.h" />
     <ClInclude Include="src\AutoTagger\Request\WebRequest.h" />
+    <ClInclude Include="src\AutoTagger\Scraper\AppleScraper.h" />
     <ClInclude Include="src\AutoTagger\Scraper\Scraper.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -64,7 +145,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>external/tinyxml2/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>external/libxml++;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -81,7 +162,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>external/tinyxml2/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>external/libxml++;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

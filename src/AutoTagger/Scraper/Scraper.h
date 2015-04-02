@@ -1,6 +1,8 @@
 
 #pragma once
 
+#include <tinyxml2.h>
+
 #include <string>
 #include <list>
 #include <map>

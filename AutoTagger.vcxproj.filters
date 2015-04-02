@@ -14,19 +14,25 @@
       <UniqueIdentifier>{80828ef1-4abe-4a50-8ed5-b627aa757ae1}</UniqueIdentifier>
     </Filter>
     <Filter Include="external">
-      <UniqueIdentifier>{8ff556e7-c089-4f11-af5b-3dcddfe4258f}</UniqueIdentifier>
+      <UniqueIdentifier>{507d7701-387c-4eaf-bc6c-df8390d5bce7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="external\tinyxml2">
-      <UniqueIdentifier>{beaa56fc-e995-47d7-b1f1-e2717120dcfb}</UniqueIdentifier>
+    <Filter Include="external\libxml++">
+      <UniqueIdentifier>{59544dc5-2aae-45ce-af36-c4ab429e7a3e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="external\tinyxml2\include">
-      <UniqueIdentifier>{7b2f5744-ac13-4bbb-be0d-d20c085b28fa}</UniqueIdentifier>
+    <Filter Include="external\libxml++\exceptions">
+      <UniqueIdentifier>{0d528e32-c5ee-44f1-be08-72ecc9de61f9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="external\tinyxml2\src">
-      <UniqueIdentifier>{c8c7bc11-3e24-4750-8ada-a9f063b63042}</UniqueIdentifier>
+    <Filter Include="external\libxml++\io">
+      <UniqueIdentifier>{86ec1f13-562a-48a3-8824-0e0872bc23d3}</UniqueIdentifier>
     </Filter>
-    <Filter Include="external\tinyxml2\include\tinyxml2">
-      <UniqueIdentifier>{eec9d221-9c3d-4523-8241-1def3842745b}</UniqueIdentifier>
+    <Filter Include="external\libxml++\validators">
+      <UniqueIdentifier>{f5f999c5-0166-42a0-b84b-6b0526b08855}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\libxml++\parsers">
+      <UniqueIdentifier>{d48360a8-9f6d-4f96-a846-2c304542ad15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\libxml++\nodes">
+      <UniqueIdentifier>{fdd74ebf-a4d4-4fd7-a429-8899a856ec06}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -36,8 +42,128 @@
     <ClCompile Include="src\AutoTagger\Request\WebRequest.cpp">
       <Filter>src\AutoTagger\Request</Filter>
     </ClCompile>
-    <ClCompile Include="external\tinyxml2\src\tinyxml2.cpp">
-      <Filter>external\tinyxml2\src</Filter>
+    <ClCompile Include="src\AutoTagger\Scraper\AppleScraper.cpp">
+      <Filter>src\AutoTagger\Scraper</Filter>
+    </ClCompile>
+    <ClCompile Include="external\libxml++\attribute.cc">
+      <Filter>external\libxml++</Filter>
+    </ClCompile>
+    <ClCompile Include="external\libxml++\attributedeclaration.cc">
+      <Filter>external\libxml++</Filter>
+    </ClCompile>
+    <ClCompile Include="external\libxml++\attributenode.cc">
+      <Filter>external\libxml++</Filter>
+    </ClCompile>
+    <ClCompile Include="external\libxml++\document.cc">
+      <Filter>external\libxml++</Filter>
+    </ClCompile>
+    <ClCompile Include="external\libxml++\dtd.cc">
+      <Filter>external\libxml++</Filter>
+    </ClCompile>
+    <ClCompile Include="external\libxml++\keepblanks.cc">
+      <Filter>external\libxml++</Filter>
+    </ClCompile>
+    <ClCompile Include="external\libxml++\noncopyable.cc">
+      <Filter>external\libxml++</Filter>
+    </ClCompile>
+    <ClCompile Include="external\libxml++\relaxngschema.cc">
+      <Filter>external\libxml++</Filter>
+    </ClCompile>
+    <ClCompile Include="external\libxml++\schema.cc">
+      <Filter>external\libxml++</Filter>
+    </ClCompile>
+    <ClCompile Include="external\libxml++\schemabase.cc">
+      <Filter>external\libxml++</Filter>
+    </ClCompile>
+    <ClCompile Include="external\libxml++\xsdschema.cc">
+      <Filter>external\libxml++</Filter>
+    </ClCompile>
+    <ClCompile Include="external\libxml++\exceptions\exception.cc">
+      <Filter>external\libxml++\exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="external\libxml++\exceptions\internal_error.cc">
+      <Filter>external\libxml++\exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="external\libxml++\exceptions\parse_error.cc">
+      <Filter>external\libxml++\exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="external\libxml++\exceptions\validity_error.cc">
+      <Filter>external\libxml++\exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="external\libxml++\io\istreamparserinputbuffer.cc">
+      <Filter>external\libxml++\io</Filter>
+    </ClCompile>
+    <ClCompile Include="external\libxml++\io\ostreamoutputbuffer.cc">
+      <Filter>external\libxml++\io</Filter>
+    </ClCompile>
+    <ClCompile Include="external\libxml++\io\outputbuffer.cc">
+      <Filter>external\libxml++\io</Filter>
+    </ClCompile>
+    <ClCompile Include="external\libxml++\io\parserinputbuffer.cc">
+      <Filter>external\libxml++\io</Filter>
+    </ClCompile>
+    <ClCompile Include="external\libxml++\nodes\cdatanode.cc">
+      <Filter>external\libxml++\nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="external\libxml++\nodes\commentnode.cc">
+      <Filter>external\libxml++\nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="external\libxml++\nodes\contentnode.cc">
+      <Filter>external\libxml++\nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="external\libxml++\nodes\element.cc">
+      <Filter>external\libxml++\nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="external\libxml++\nodes\entitydeclaration.cc">
+      <Filter>external\libxml++\nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="external\libxml++\nodes\entityreference.cc">
+      <Filter>external\libxml++\nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="external\libxml++\nodes\node.cc">
+      <Filter>external\libxml++\nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="external\libxml++\nodes\processinginstructionnode.cc">
+      <Filter>external\libxml++\nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="external\libxml++\nodes\textnode.cc">
+      <Filter>external\libxml++\nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="external\libxml++\nodes\xincludeend.cc">
+      <Filter>external\libxml++\nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="external\libxml++\nodes\xincludestart.cc">
+      <Filter>external\libxml++\nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="external\libxml++\parsers\domparser.cc">
+      <Filter>external\libxml++\parsers</Filter>
+    </ClCompile>
+    <ClCompile Include="external\libxml++\parsers\parser.cc">
+      <Filter>external\libxml++\parsers</Filter>
+    </ClCompile>
+    <ClCompile Include="external\libxml++\parsers\saxparser.cc">
+      <Filter>external\libxml++\parsers</Filter>
+    </ClCompile>
+    <ClCompile Include="external\libxml++\parsers\textreader.cc">
+      <Filter>external\libxml++\parsers</Filter>
+    </ClCompile>
+    <ClCompile Include="external\libxml++\validators\dtdvalidator.cc">
+      <Filter>external\libxml++\validators</Filter>
+    </ClCompile>
+    <ClCompile Include="external\libxml++\validators\relaxngvalidator.cc">
+      <Filter>external\libxml++\validators</Filter>
+    </ClCompile>
+    <ClCompile Include="external\libxml++\validators\schemavalidator.cc">
+      <Filter>external\libxml++\validators</Filter>
+    </ClCompile>
+    <ClCompile Include="external\libxml++\validators\schemavalidatorbase.cc">
+      <Filter>external\libxml++\validators</Filter>
+    </ClCompile>
+    <ClCompile Include="external\libxml++\validators\validator.cc">
+      <Filter>external\libxml++\validators</Filter>
+    </ClCompile>
+    <ClCompile Include="external\libxml++\validators\xsdvalidator.cc">
+      <Filter>external\libxml++\validators</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -47,11 +173,134 @@
     <ClInclude Include="src\AutoTagger\Request\WebRequest.h">
       <Filter>src\AutoTagger\Request</Filter>
     </ClInclude>
-    <ClInclude Include="external\tinyxml2\include\tinyxml2\tinyxml2.h">
-      <Filter>external\tinyxml2\include\tinyxml2</Filter>
-    </ClInclude>
     <ClInclude Include="src\AutoTagger\Scraper\Scraper.h">
       <Filter>src\AutoTagger\Scraper</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AutoTagger\Scraper\AppleScraper.h">
+      <Filter>src\AutoTagger\Scraper</Filter>
+    </ClInclude>
+    <ClInclude Include="external\libxml++\attribute.h">
+      <Filter>external\libxml++</Filter>
+    </ClInclude>
+    <ClInclude Include="external\libxml++\attributedeclaration.h">
+      <Filter>external\libxml++</Filter>
+    </ClInclude>
+    <ClInclude Include="external\libxml++\attributenode.h">
+      <Filter>external\libxml++</Filter>
+    </ClInclude>
+    <ClInclude Include="external\libxml++\document.h">
+      <Filter>external\libxml++</Filter>
+    </ClInclude>
+    <ClInclude Include="external\libxml++\dtd.h">
+      <Filter>external\libxml++</Filter>
+    </ClInclude>
+    <ClInclude Include="external\libxml++\keepblanks.h">
+      <Filter>external\libxml++</Filter>
+    </ClInclude>
+    <ClInclude Include="external\libxml++\libxml++.h">
+      <Filter>external\libxml++</Filter>
+    </ClInclude>
+    <ClInclude Include="external\libxml++\noncopyable.h">
+      <Filter>external\libxml++</Filter>
+    </ClInclude>
+    <ClInclude Include="external\libxml++\relaxngschema.h">
+      <Filter>external\libxml++</Filter>
+    </ClInclude>
+    <ClInclude Include="external\libxml++\schema.h">
+      <Filter>external\libxml++</Filter>
+    </ClInclude>
+    <ClInclude Include="external\libxml++\schemabase.h">
+      <Filter>external\libxml++</Filter>
+    </ClInclude>
+    <ClInclude Include="external\libxml++\xsdschema.h">
+      <Filter>external\libxml++</Filter>
+    </ClInclude>
+    <ClInclude Include="external\libxml++\exceptions\exception.h">
+      <Filter>external\libxml++\exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="external\libxml++\exceptions\internal_error.h">
+      <Filter>external\libxml++\exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="external\libxml++\exceptions\parse_error.h">
+      <Filter>external\libxml++\exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="external\libxml++\exceptions\validity_error.h">
+      <Filter>external\libxml++\exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="external\libxml++\io\istreamparserinputbuffer.h">
+      <Filter>external\libxml++\io</Filter>
+    </ClInclude>
+    <ClInclude Include="external\libxml++\io\ostreamoutputbuffer.h">
+      <Filter>external\libxml++\io</Filter>
+    </ClInclude>
+    <ClInclude Include="external\libxml++\io\outputbuffer.h">
+      <Filter>external\libxml++\io</Filter>
+    </ClInclude>
+    <ClInclude Include="external\libxml++\io\parserinputbuffer.h">
+      <Filter>external\libxml++\io</Filter>
+    </ClInclude>
+    <ClInclude Include="external\libxml++\nodes\cdatanode.h">
+      <Filter>external\libxml++\nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="external\libxml++\nodes\commentnode.h">
+      <Filter>external\libxml++\nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="external\libxml++\nodes\contentnode.h">
+      <Filter>external\libxml++\nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="external\libxml++\nodes\element.h">
+      <Filter>external\libxml++\nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="external\libxml++\nodes\entitydeclaration.h">
+      <Filter>external\libxml++\nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="external\libxml++\nodes\entityreference.h">
+      <Filter>external\libxml++\nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="external\libxml++\nodes\node.h">
+      <Filter>external\libxml++\nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="external\libxml++\nodes\processinginstructionnode.h">
+      <Filter>external\libxml++\nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="external\libxml++\nodes\textnode.h">
+      <Filter>external\libxml++\nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="external\libxml++\nodes\xincludeend.h">
+      <Filter>external\libxml++\nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="external\libxml++\nodes\xincludestart.h">
+      <Filter>external\libxml++\nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="external\libxml++\parsers\domparser.h">
+      <Filter>external\libxml++\parsers</Filter>
+    </ClInclude>
+    <ClInclude Include="external\libxml++\parsers\parser.h">
+      <Filter>external\libxml++\parsers</Filter>
+    </ClInclude>
+    <ClInclude Include="external\libxml++\parsers\saxparser.h">
+      <Filter>external\libxml++\parsers</Filter>
+    </ClInclude>
+    <ClInclude Include="external\libxml++\parsers\textreader.h">
+      <Filter>external\libxml++\parsers</Filter>
+    </ClInclude>
+    <ClInclude Include="external\libxml++\validators\dtdvalidator.h">
+      <Filter>external\libxml++\validators</Filter>
+    </ClInclude>
+    <ClInclude Include="external\libxml++\validators\relaxngvalidator.h">
+      <Filter>external\libxml++\validators</Filter>
+    </ClInclude>
+    <ClInclude Include="external\libxml++\validators\schemavalidator.h">
+      <Filter>external\libxml++\validators</Filter>
+    </ClInclude>
+    <ClInclude Include="external\libxml++\validators\schemavalidatorbase.h">
+      <Filter>external\libxml++\validators</Filter>
+    </ClInclude>
+    <ClInclude Include="external\libxml++\validators\validator.h">
+      <Filter>external\libxml++\validators</Filter>
+    </ClInclude>
+    <ClInclude Include="external\libxml++\validators\xsdvalidator.h">
+      <Filter>external\libxml++\validators</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
