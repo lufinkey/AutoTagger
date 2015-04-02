@@ -12,5 +12,7 @@ namespace autotagger
 		
 		static std::string getContentsOfURL(const std::string&url);
 		static void loadContentsOfURL(const std::string&url, LoadFinishCallback callback);
+
+		static void tester();
 	};
 }

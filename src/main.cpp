@@ -1,8 +1,9 @@
 
+#include "AutoTagger/AutoTagger.h"
 
-
-int _tmain(int argc, char* argv[])
+int main(int argc, char* argv[])
 {
+	system("PAUSE");
 	return 0;
 }
 
