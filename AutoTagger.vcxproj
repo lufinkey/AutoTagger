@@ -11,11 +11,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\AutoTagger\Utilities\WebRequest.cpp" />
+    <ClCompile Include="src\AutoTagger\WebRequest.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\AutoTagger\Utilities\WebRequest.h" />
+    <ClInclude Include="src\AutoTagger\AutoTagger.h" />
+    <ClInclude Include="src\AutoTagger\WebRequest.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{94072E47-ABB0-45CA-82FB-90AAB4C7CDBF}</ProjectGuid>

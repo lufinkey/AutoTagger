@@ -5,6 +5,10 @@
 
 #include "WebRequest.h"
 
+#include <iostream>
+#include <stdexcept>
+#include <thread>
+
 #ifdef _WIN32
 	#include <WinSock2.h>
 #else
@@ -84,6 +88,8 @@ namespace autotagger
 		
 		std::string request = "GET " + subpage + " HTTP/1.1\r\nHost: " + host + "\r\nConnection: close\r\n\r\n";
 		send(sock, request.c_str(), request.length(), 0);
+		
+		results->clear();
 		char buffer[10000];
 		size_t nDataLength;
 		while((nDataLength = recv(sock,buffer,9999,0)) > 0)
@@ -92,30 +98,89 @@ namespace autotagger
 			results->append(buffer);
 		}
 		close(sock);
-
+		
 		#ifdef _WIN32
 			WSACleanup();
 		#endif
 		
 		return true;
 	}
-
+	
 #ifdef _WIN32
 	#undef close
 #else
 	#undef SOCKET
 #endif
 	
-	std::string WebRequest::getContentsOfURL(const std::string&url)
+	void WebRequest_separateURLTokens(const std::string&url, std::string*host, std::string*subpage)
 	{
-		return "";
+		if(host == nullptr)
+		{
+			throw std::invalid_argument("host");
+		}
+		else if(subpage == nullptr)
+		{
+			throw std::invalid_argument("subpage");
+		}
+		
+		size_t host_start_index = 0;
+		size_t subpage_start_index = url.length();
+		
+		std::string protocol_separator = "://";
+		
+		std::string protocol = "http";
+		size_t protocol_end_index = url.find(protocol_separator);
+		if(protocol_end_index != std::string::npos)
+		{
+			protocol = url.substr(0, protocol_end_index-0);
+			host_start_index = protocol_end_index + protocol_separator.length();
+		}
+		
+		if(protocol.compare("http")!=0 && protocol.length()!=0)
+		{
+			if(protocol.compare("https") == 0)
+			{
+				std::cerr << "https is not yet supported" << std::endl;
+			}
+			throw std::invalid_argument("url");
+		}
+		
+		size_t next_slash_index = url.find("/", host_start_index);
+		if(next_slash_index == std::string::npos)
+		{
+			next_slash_index = url.find("?", host_start_index);
+		}
+		
+		if(next_slash_index != std::string::npos)
+		{
+			subpage_start_index = next_slash_index;
+		}
+		
+		*host = url.substr(host_start_index, subpage_start_index);
+		*subpage = url.substr(subpage_start_index, url.length());
+		if(subpage->length() == 0)
+		{
+			*subpage = "/";
+		}
 	}
 	
-	void WebRequest::loadContentsOfURL(const std::string&url, LoadFinishCallback callback)
+	std::string WebRequest::getContentsOfURL(const std::string&url)
 	{
-		if(callback != nullptr)
+		std::string host;
+		std::string subpage;
+		try
 		{
-			callback("");
+			WebRequest_separateURLTokens(url, &host, &subpage);
 		}
+		catch(const std::invalid_argument&)
+		{
+			return "";
+		}
+		
+		std::string results;
+		std::string error;
+		bool success = WebRequest_getContentsOfURL(host, subpage, &results, &error);
+		
+		return results;
 	}
 }
