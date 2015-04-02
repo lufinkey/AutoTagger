@@ -112,7 +112,7 @@ namespace autotagger
 	#undef SOCKET
 #endif
 	
-	void WebRequest_separateURLTokens(const std::string&url, std::string*host, std::string*subpage)
+	void WebRequest::separateURL(const std::string&url, std::string*host, std::string*subpage)
 	{
 		if(host == nullptr)
 		{
@@ -170,7 +170,7 @@ namespace autotagger
 		std::string subpage;
 		try
 		{
-			WebRequest_separateURLTokens(url, &host, &subpage);
+			WebRequest::separateURL(url, &host, &subpage);
 		}
 		catch(const std::invalid_argument&)
 		{
