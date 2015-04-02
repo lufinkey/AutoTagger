@@ -7,21 +7,48 @@
     <Filter Include="src\AutoTagger">
       <UniqueIdentifier>{0afa8b2a-3875-413d-993b-7c89f2403502}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\AutoTagger\Scraper">
+      <UniqueIdentifier>{7197c3b1-9080-4a8b-a536-e7f5795eb83b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\AutoTagger\Request">
+      <UniqueIdentifier>{80828ef1-4abe-4a50-8ed5-b627aa757ae1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external">
+      <UniqueIdentifier>{8ff556e7-c089-4f11-af5b-3dcddfe4258f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\tinyxml2">
+      <UniqueIdentifier>{beaa56fc-e995-47d7-b1f1-e2717120dcfb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\tinyxml2\include">
+      <UniqueIdentifier>{7b2f5744-ac13-4bbb-be0d-d20c085b28fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\tinyxml2\src">
+      <UniqueIdentifier>{c8c7bc11-3e24-4750-8ada-a9f063b63042}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\tinyxml2\include\tinyxml2">
+      <UniqueIdentifier>{eec9d221-9c3d-4523-8241-1def3842745b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\AutoTagger\WebRequest.cpp">
-      <Filter>src\AutoTagger</Filter>
+    <ClCompile Include="src\AutoTagger\Request\WebRequest.cpp">
+      <Filter>src\AutoTagger\Request</Filter>
+    </ClCompile>
+    <ClCompile Include="external\tinyxml2\src\tinyxml2.cpp">
+      <Filter>external\tinyxml2\src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\AutoTagger\WebRequest.h">
-      <Filter>src\AutoTagger</Filter>
-    </ClInclude>
     <ClInclude Include="src\AutoTagger\AutoTagger.h">
       <Filter>src\AutoTagger</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AutoTagger\Request\WebRequest.h">
+      <Filter>src\AutoTagger\Request</Filter>
+    </ClInclude>
+    <ClInclude Include="external\tinyxml2\include\tinyxml2\tinyxml2.h">
+      <Filter>external\tinyxml2\include\tinyxml2</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

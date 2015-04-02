@@ -11,12 +11,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\AutoTagger\WebRequest.cpp" />
+    <ClCompile Include="external\tinyxml2\src\tinyxml2.cpp" />
+    <ClCompile Include="src\AutoTagger\Request\WebRequest.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="external\tinyxml2\include\tinyxml2\tinyxml2.h" />
     <ClInclude Include="src\AutoTagger\AutoTagger.h" />
-    <ClInclude Include="src\AutoTagger\WebRequest.h" />
+    <ClInclude Include="src\AutoTagger\Request\WebRequest.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{94072E47-ABB0-45CA-82FB-90AAB4C7CDBF}</ProjectGuid>
@@ -61,6 +63,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>external/tinyxml2/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -77,6 +80,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>external/tinyxml2/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
