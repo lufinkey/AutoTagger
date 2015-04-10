@@ -16,9 +16,6 @@
     <Filter Include="external">
       <UniqueIdentifier>{507d7701-387c-4eaf-bc6c-df8390d5bce7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\AutoTagger\libxml_plus">
-      <UniqueIdentifier>{922cce1f-9a72-4d92-837c-a9bb484c98a2}</UniqueIdentifier>
-    </Filter>
     <Filter Include="external\libxml2">
       <UniqueIdentifier>{06aa4652-bad7-430b-aeb3-55209c16a265}</UniqueIdentifier>
     </Filter>
@@ -55,6 +52,9 @@
     <Filter Include="external\libxml2++\libxml++\nodes">
       <UniqueIdentifier>{57cc3402-9957-48e6-a53d-561048512790}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\AutoTagger\libxml_plus">
+      <UniqueIdentifier>{653af158-febb-4b9c-9d73-c6260d1e8107}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -65,9 +65,6 @@
     </ClCompile>
     <ClCompile Include="src\AutoTagger\Scraper\AppleScraper.cpp">
       <Filter>src\AutoTagger\Scraper</Filter>
-    </ClCompile>
-    <ClCompile Include="src\AutoTagger\libxml_plus\libxml_plus.cpp">
-      <Filter>src\AutoTagger\libxml_plus</Filter>
     </ClCompile>
     <ClCompile Include="external\libxml2++\libxml++\attribute.cc">
       <Filter>external\libxml2++\libxml++</Filter>
@@ -189,6 +186,9 @@
     <ClCompile Include="external\libxml2++\libxml++\validators\xsdvalidator.cc">
       <Filter>external\libxml2++\libxml++\validators</Filter>
     </ClCompile>
+    <ClCompile Include="src\AutoTagger\libxml_plus\libxml_plus.cpp">
+      <Filter>src\AutoTagger\libxml_plus</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\AutoTagger\AutoTagger.h">
@@ -202,9 +202,6 @@
     </ClInclude>
     <ClInclude Include="src\AutoTagger\Scraper\AppleScraper.h">
       <Filter>src\AutoTagger\Scraper</Filter>
-    </ClInclude>
-    <ClInclude Include="src\AutoTagger\libxml_plus\libxml_plus.h">
-      <Filter>src\AutoTagger\libxml_plus</Filter>
     </ClInclude>
     <ClInclude Include="external\libxml2\include\libxml\c14n.h">
       <Filter>external\libxml2\include\libxml</Filter>
@@ -475,6 +472,9 @@
     </ClInclude>
     <ClInclude Include="external\libxml2++\libxml++\validators\xsdvalidator.h">
       <Filter>external\libxml2++\libxml++\validators</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AutoTagger\libxml_plus\libxml_plus.h">
+      <Filter>src\AutoTagger\libxml_plus</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

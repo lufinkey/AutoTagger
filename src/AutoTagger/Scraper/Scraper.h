@@ -19,7 +19,7 @@ namespace autotagger
 	
 	class Scraper
 	{
-	private:
+	public:
 		virtual ~Scraper(){}
 		virtual ScrapedData scrape(const std::string&pagedata) = 0;
 	};
