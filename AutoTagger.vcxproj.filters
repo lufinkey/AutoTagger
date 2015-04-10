@@ -573,6 +573,9 @@
     <ClCompile Include="src\AutoTagger\Tagger\Tagger.cpp">
       <Filter>src\AutoTagger\Tagger</Filter>
     </ClCompile>
+    <ClCompile Include="src\AutoTagger\Scraper\iTunesLookupScraper.cpp">
+      <Filter>src\AutoTagger\Scraper</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\AutoTagger\AutoTagger.h">
@@ -1201,6 +1204,9 @@
     </ClInclude>
     <ClInclude Include="external\rapidjson\include\rapidjson\internal\strfunc.h">
       <Filter>external\rapidjson\include\rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AutoTagger\Scraper\iTunesLookupScraper.h">
+      <Filter>src\AutoTagger\Scraper</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

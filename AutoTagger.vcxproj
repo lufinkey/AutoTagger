@@ -150,6 +150,7 @@
     <ClCompile Include="src\AutoTagger\libxml_plus\libxml_plus.cpp" />
     <ClCompile Include="src\AutoTagger\Request\WebRequest.cpp" />
     <ClCompile Include="src\AutoTagger\Scraper\AppleScraper.cpp" />
+    <ClCompile Include="src\AutoTagger\Scraper\iTunesLookupScraper.cpp" />
     <ClCompile Include="src\AutoTagger\Tagger\Tagger.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
@@ -361,6 +362,7 @@
     <ClInclude Include="src\AutoTagger\libxml_plus\libxml_plus.h" />
     <ClInclude Include="src\AutoTagger\Request\WebRequest.h" />
     <ClInclude Include="src\AutoTagger\Scraper\AppleScraper.h" />
+    <ClInclude Include="src\AutoTagger\Scraper\iTunesLookupScraper.h" />
     <ClInclude Include="src\AutoTagger\Scraper\Scraper.h" />
     <ClInclude Include="src\AutoTagger\Tagger\Tagger.h" />
   </ItemGroup>
