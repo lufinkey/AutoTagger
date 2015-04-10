@@ -136,6 +136,18 @@
     <Filter Include="src\AutoTagger\Tagger">
       <UniqueIdentifier>{c1e15382-95f5-49d7-afeb-6fc3838829c9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="external\rapidjson">
+      <UniqueIdentifier>{b5dbb3cb-6f14-40cd-9920-b4184497e737}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\rapidjson\include">
+      <UniqueIdentifier>{d36e4b8d-bae0-4534-95ef-193823a6c4dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\rapidjson\include\rapidjson">
+      <UniqueIdentifier>{fad43631-e480-4d3d-8ad4-52ac983aaef9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\rapidjson\include\rapidjson\internal">
+      <UniqueIdentifier>{85c2413c-89c9-4c8e-94e7-7ea1d9ac2727}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -1159,6 +1171,36 @@
     </ClInclude>
     <ClInclude Include="src\AutoTagger\Tagger\Tagger.h">
       <Filter>src\AutoTagger\Tagger</Filter>
+    </ClInclude>
+    <ClInclude Include="external\rapidjson\include\rapidjson\document.h">
+      <Filter>external\rapidjson\include\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="external\rapidjson\include\rapidjson\filestream.h">
+      <Filter>external\rapidjson\include\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="external\rapidjson\include\rapidjson\prettywriter.h">
+      <Filter>external\rapidjson\include\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="external\rapidjson\include\rapidjson\rapidjson.h">
+      <Filter>external\rapidjson\include\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="external\rapidjson\include\rapidjson\reader.h">
+      <Filter>external\rapidjson\include\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="external\rapidjson\include\rapidjson\stringbuffer.h">
+      <Filter>external\rapidjson\include\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="external\rapidjson\include\rapidjson\writer.h">
+      <Filter>external\rapidjson\include\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="external\rapidjson\include\rapidjson\internal\pow10.h">
+      <Filter>external\rapidjson\include\rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="external\rapidjson\include\rapidjson\internal\stack.h">
+      <Filter>external\rapidjson\include\rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="external\rapidjson\include\rapidjson\internal\strfunc.h">
+      <Filter>external\rapidjson\include\rapidjson\internal</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

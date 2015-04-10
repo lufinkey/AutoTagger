@@ -244,6 +244,16 @@
     <ClInclude Include="external\libxml2\include\libxml\xpath.h" />
     <ClInclude Include="external\libxml2\include\libxml\xpathInternals.h" />
     <ClInclude Include="external\libxml2\include\libxml\xpointer.h" />
+    <ClInclude Include="external\rapidjson\include\rapidjson\document.h" />
+    <ClInclude Include="external\rapidjson\include\rapidjson\filestream.h" />
+    <ClInclude Include="external\rapidjson\include\rapidjson\internal\pow10.h" />
+    <ClInclude Include="external\rapidjson\include\rapidjson\internal\stack.h" />
+    <ClInclude Include="external\rapidjson\include\rapidjson\internal\strfunc.h" />
+    <ClInclude Include="external\rapidjson\include\rapidjson\prettywriter.h" />
+    <ClInclude Include="external\rapidjson\include\rapidjson\rapidjson.h" />
+    <ClInclude Include="external\rapidjson\include\rapidjson\reader.h" />
+    <ClInclude Include="external\rapidjson\include\rapidjson\stringbuffer.h" />
+    <ClInclude Include="external\rapidjson\include\rapidjson\writer.h" />
     <ClInclude Include="external\taglib\taglib\ape\apefile.h" />
     <ClInclude Include="external\taglib\taglib\ape\apefooter.h" />
     <ClInclude Include="external\taglib\taglib\ape\apeitem.h" />
@@ -408,7 +418,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>TAGLIB_NOUTPUT;TAGLIB_STATIC;WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>external/taglib;external/iconv/include;external/libxml2/include;external/libxml2++;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>external/rapidjson/include;external/taglib;external/iconv/include;external/libxml2/include;external/libxml2++;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -427,7 +437,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>TAGLIB_NOUTPUT;TAGLIB_STATIC;WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>external/taglib;external/iconv/include;external/libxml2/include;external/libxml2++;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>external/rapidjson/include;external/taglib;external/iconv/include;external/libxml2/include;external/libxml2++;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
