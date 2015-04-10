@@ -1,7 +1,7 @@
 
 #pragma once
 
-#include <tinyxml2.h>
+#include "../libxml_plus/libxml_plus.h"
 
 #include <string>
 #include <list>
