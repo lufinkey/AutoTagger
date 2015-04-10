@@ -133,6 +133,9 @@
     <Filter Include="external\taglib\taglib\riff\wav">
       <UniqueIdentifier>{b649a92a-f91e-4243-9101-ca97aee2903d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\AutoTagger\Tagger">
+      <UniqueIdentifier>{c1e15382-95f5-49d7-afeb-6fc3838829c9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -554,6 +557,9 @@
     </ClCompile>
     <ClCompile Include="external\taglib\taglib\xm\xmproperties.cpp">
       <Filter>external\taglib\taglib\xm</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AutoTagger\Tagger\Tagger.cpp">
+      <Filter>src\AutoTagger\Tagger</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -1150,6 +1156,9 @@
     </ClInclude>
     <ClInclude Include="external\taglib\taglib\xm\xmproperties.h">
       <Filter>external\taglib\taglib\xm</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AutoTagger\Tagger\Tagger.h">
+      <Filter>src\AutoTagger\Tagger</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

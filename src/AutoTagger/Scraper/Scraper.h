@@ -6,15 +6,35 @@
 #include <string>
 #include <list>
 #include <map>
+#include <vector>
 
 namespace autotagger
 {
-	typedef std::map<std::string, std::string> Track;
+	typedef struct
+	{
+		unsigned int index;
+		std::string title;
+		std::string artist;
+		std::string composer;
+		unsigned int disc;
+	} TrackProperties;
 	
 	typedef struct
 	{
-		std::vector<Track> track_properties;
-		std::map<std::string, std::string> album_properties;
+		std::string title;
+		std::string artist;
+		std::string genre;
+		unsigned int tracks;
+		unsigned int discs;
+		unsigned int year;
+		std::string artwork_mimetype;
+		std::vector<char> artwork;
+	} AlbumProperties;
+	
+	typedef struct
+	{
+		std::vector<TrackProperties> track_properties;
+		AlbumProperties album_properties;
 	} ScrapedData;
 	
 	class Scraper
