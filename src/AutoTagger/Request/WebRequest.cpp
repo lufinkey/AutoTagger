@@ -27,7 +27,7 @@ namespace autotagger
 	#define SOCKET int
 #endif
 	
-	bool WebRequest_getContentsOfURL(const std::string&host, const std::string&subpage, std::string*results, std::string*error)
+	bool WebRequest_getContentsOfURL(const std::string&host, const std::string&subpage, std::vector<char>*results, std::string*error)
 	{
 		if(results==nullptr)
 		{
@@ -95,7 +95,15 @@ namespace autotagger
 		while((nDataLength = recv(sock,buffer,9999,0)) > 0)
 		{        
 			buffer[nDataLength] = '\0';
-			results->append(buffer);
+			size_t startIndex = results->size();
+			results->resize(results->size()+nDataLength);
+			size_t results_size = results->size();
+			size_t bufferCounter = 0;
+			for(size_t i=startIndex; i<results_size; i++)
+			{
+				results->at(i) = buffer[bufferCounter];
+				bufferCounter++;
+			}
 		}
 		close(sock);
 		
@@ -164,7 +172,7 @@ namespace autotagger
 		}
 	}
 	
-	std::string WebRequest::getContentsOfURL(const std::string&url)
+	std::vector<char> WebRequest::getContentsOfURL(const std::string&url)
 	{
 		std::string host;
 		std::string subpage;
@@ -174,10 +182,10 @@ namespace autotagger
 		}
 		catch(const std::invalid_argument&)
 		{
-			return "";
+			return std::vector<char>();
 		}
 		
-		std::string results;
+		std::vector<char> results;
 		std::string error;
 		bool success = WebRequest_getContentsOfURL(host, subpage, &results, &error);
 		
