@@ -7,7 +7,7 @@
 
 namespace autotagger
 {
-	void tag_albumartist(TagLib::MPEG::File& file, const ScrapedData&scrapedData)
+	void tag_albumartist(TagLib::MPEG::File& file, const ScrapedData&scrapedData, const TagOptions&options)
 	{
 		std::string albumartist = scrapedData.album_properties.artist;
 		TagLib::ID3v2::Tag *tag = file.ID3v2Tag(true);
@@ -23,7 +23,7 @@ namespace autotagger
 		}
 	}
 	
-	void tag_albumartwork(TagLib::MPEG::File& file, const ScrapedData&scrapedData)
+	void tag_albumartwork(TagLib::MPEG::File& file, const ScrapedData&scrapedData, const TagOptions&options)
 	{
 		if(scrapedData.album_properties.artwork.size()!=0 && scrapedData.album_properties.artwork_mimetype.length()!=0)
 		{
@@ -46,7 +46,7 @@ namespace autotagger
 		}
 	}
 	
-	bool Tagger::tagFile(const ScrapedData&scrapedData, unsigned int trackIndex, const std::string& filePath)
+	bool Tagger::tagFile(const ScrapedData&scrapedData, unsigned int trackIndex, const std::string& filePath, const TagOptions&options)
 	{
 		const TrackProperties* track_ptr = nullptr;
 		size_t track_properties_size = scrapedData.track_properties.size();
@@ -70,27 +70,36 @@ namespace autotagger
 		{
 			const TrackProperties& track = *track_ptr;
 			TagLib::MPEG::File file(filePath.c_str());
+			TagLib::ID3v2::Tag*tag = file.ID3v2Tag(true);
 			file.tag()->setAlbum(scrapedData.album_properties.title);
-			tag_albumartist(file, scrapedData);
-			tag_albumartwork(file, scrapedData);
+			tag_albumartist(file, scrapedData, options);
+			tag_albumartwork(file, scrapedData, options);
 			file.tag()->setGenre(scrapedData.album_properties.genre);
 			file.tag()->setYear(scrapedData.album_properties.year);
 			file.tag()->setTrack(track.index);
 			file.tag()->setTitle(track.title);
 			file.tag()->setArtist(track.artist);
+			tag->frameList("TRCK").front()->setText(std::to_string(track.index) + "/" + std::to_string(scrapedData.album_properties.tracks));
+			
+			if(options.clearUnusedFields)
+			{
+				file.tag()->setComment("");
+				//TODO clear lyrics
+			}
+			
 			file.save();
 			return true;
 		}
 		return false;
 	}
 	
-	size_t Tagger::tagFiles(const ScrapedData&scrapedData, const std::vector<std::pair<unsigned int, std::string> >& files)
+	size_t Tagger::tagFiles(const ScrapedData&scrapedData, const std::vector<std::pair<unsigned int, std::string> >& files, const TagOptions&options)
 	{
 		size_t taggedFiles = 0;
 		size_t files_size = files.size();
 		for(size_t i=0; i<files_size; i++)
 		{
-			bool success = tagFile(scrapedData, files.at(i).first, files.at(i).second);
+			bool success = tagFile(scrapedData, files.at(i).first, files.at(i).second, options);
 			if(success)
 			{
 				taggedFiles++;

@@ -10,17 +10,24 @@
 
 namespace autotagger
 {
-	typedef struct
+	class TrackProperties
 	{
+	public:
 		unsigned int index;
 		std::string title;
 		std::string artist;
 		std::string composer;
 		unsigned int disc;
-	} TrackProperties;
+		
+		TrackProperties() : index(0), disc(1)
+		{
+			//
+		}
+	};
 	
-	typedef struct
+	class AlbumProperties
 	{
+	public:
 		std::string title;
 		std::string artist;
 		std::string genre;
@@ -29,7 +36,12 @@ namespace autotagger
 		unsigned int year;
 		std::string artwork_mimetype;
 		std::vector<char> artwork;
-	} AlbumProperties;
+		
+		AlbumProperties() : tracks(0), discs(1), year(0)
+		{
+			//
+		}
+	};
 	
 	typedef struct
 	{
