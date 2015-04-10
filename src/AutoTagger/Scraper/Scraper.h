@@ -13,7 +13,7 @@ namespace autotagger
 	
 	typedef struct
 	{
-		std::list<Track> track_properties;
+		std::vector<Track> track_properties;
 		std::map<std::string, std::string> album_properties;
 	} ScrapedData;
 	

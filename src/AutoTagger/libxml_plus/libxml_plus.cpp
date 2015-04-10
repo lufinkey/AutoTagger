@@ -1,7 +1,7 @@
 
 #include "libxml_plus.h"
 
-namespace tinyxml2
+namespace xmlpp
 {
 	std::vector<std::string> string_split(const std::string&str, char delim)
 	{
@@ -95,6 +95,30 @@ namespace tinyxml2
 		}
 		return nullptr;
 	}
+	
+	xmlpp::Element* Node_getNthChildElement(xmlpp::Node*node, size_t n)
+	{
+		if(n == 0)
+		{
+			return nullptr;
+		}
+		xmlpp::Node::NodeList children(node->get_children());
+		size_t children_size = children.size();
+		size_t counter = 1;
+		for(size_t i=0; i<children_size; i++)
+		{
+			xmlpp::Node* node = *std::next(children.begin(), i);
+			if(node->cobj()->type == XML_ELEMENT_NODE)
+			{
+				if(counter==n)
+				{
+					return static_cast<xmlpp::Element*>(node);
+				}
+				counter++;
+			}
+		}
+		return nullptr;
+	}
 
 	xmlpp::Element* Node_getElementById(xmlpp::Node*node, const std::string&id)
 	{
@@ -149,10 +173,28 @@ namespace tinyxml2
 				{
 					elements.push_back(current_element);
 				}
-				else
+				vector_push_back(elements, Node_getElementsByClassNames(current_node, classNames));
+			}
+		}
+		return elements;
+	}
+	
+	std::vector<xmlpp::Element*> Node_getElementsByTagName(xmlpp::Node*node, const std::string& tagName)
+	{
+		std::vector<xmlpp::Element*> elements;
+		xmlpp::Node::NodeList children(node->get_children());
+		size_t children_size = children.size();
+		for(size_t i=0; i<children_size; i++)
+		{
+			xmlpp::Node* current_node = *std::next(children.begin(), i);
+			if(node->cobj()->type == XML_ELEMENT_NODE)
+			{
+				xmlpp::Element*current_element = static_cast<xmlpp::Element*>(node);
+				if(current_element->get_name()==tagName)
 				{
-					vector_push_back(elements, Node_getElementsByClassNames(current_node, classNames));
+					elements.push_back(current_element);
 				}
+				vector_push_back(elements, Node_getElementsByTagName(current_node, tagName));
 			}
 		}
 		return elements;
