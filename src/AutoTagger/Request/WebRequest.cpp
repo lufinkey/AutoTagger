@@ -187,7 +187,20 @@ namespace autotagger
 		std::vector<char> results;
 		std::string error;
 		bool success = WebRequest_getContentsOfURL(host, subpage, &results, &error);
-		
+		std::string results_str(results.data(), results.data()+results.size());
+		std::string contentLengthStr = "Content-Length: ";
+		size_t contentLengthIndex = results_str.find(contentLengthStr);
+		if(contentLengthIndex != std::string::npos)
+		{
+			size_t endlineIndex = results_str.find("\r", contentLengthIndex);
+			if(endlineIndex == std::string::npos)
+			{
+				endlineIndex = results_str.find("\n", contentLengthIndex);
+			}
+			size_t contentLength_startIndex = contentLengthIndex+contentLengthStr.length();
+			size_t contentLength = (size_t)std::atoi(results_str.substr(contentLength_startIndex, endlineIndex-contentLength_startIndex).c_str());
+			results = std::vector<char>(results.data()+results.size()-contentLength, results.data()+results.size());
+		}
 		return results;
 	}
 }
