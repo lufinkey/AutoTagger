@@ -71,14 +71,14 @@ namespace autotagger
 			const TrackProperties& track = *track_ptr;
 			TagLib::MPEG::File file(filePath.c_str());
 			TagLib::ID3v2::Tag*tag = file.ID3v2Tag(true);
-			file.tag()->setAlbum(scrapedData.album_properties.title);
+			tag->setAlbum(scrapedData.album_properties.title);
 			tag_albumartist(file, scrapedData, options);
 			tag_albumartwork(file, scrapedData, options);
-			file.tag()->setGenre(scrapedData.album_properties.genre);
-			file.tag()->setYear(scrapedData.album_properties.year);
-			file.tag()->setTrack(track.index);
-			file.tag()->setTitle(track.title);
-			file.tag()->setArtist(track.artist);
+			tag->setGenre(scrapedData.album_properties.genre);
+			tag->setYear(scrapedData.album_properties.year);
+			tag->setTrack(track.index);
+			tag->setTitle(track.title);
+			tag->setArtist(track.artist);
 			tag->frameList("TRCK").front()->setText(std::to_string(track.index) + "/" + std::to_string(scrapedData.album_properties.tracks));
 			
 			if(options.clearUnusedFields)
