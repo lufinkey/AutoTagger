@@ -63,7 +63,7 @@ int main(int argc, char* argv[])
 			std::string file = files.at(i);
 			std::cout << std::endl << "File name: " << file << std::endl;
 			std::cout << "Enter track number: ";
-			std::string trackNo_str = 0;
+			std::string trackNo_str = "";
 			std::getline(std::cin, trackNo_str);
 			unsigned int trackNo = std::atoi(trackNo_str.c_str());
 			bool success = Tagger::tagFile(scrapedData, trackNo, path + "/" + file);
