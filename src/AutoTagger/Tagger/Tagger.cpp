@@ -87,8 +87,7 @@ namespace autotagger
 				//TODO clear lyrics
 			}
 			
-			file.save();
-			return true;
+			return file.save();
 		}
 		return false;
 	}

@@ -152,7 +152,6 @@ namespace autotagger
 			}
 			throw std::invalid_argument("url");
 		}
-		
 		size_t next_slash_index = url.find("/", host_start_index);
 		if(next_slash_index == std::string::npos)
 		{
@@ -164,8 +163,8 @@ namespace autotagger
 			subpage_start_index = next_slash_index;
 		}
 		
-		*host = url.substr(host_start_index, subpage_start_index);
-		*subpage = url.substr(subpage_start_index, url.length());
+		*host = url.substr(host_start_index, subpage_start_index-host_start_index);
+		*subpage = url.substr(subpage_start_index, url.length()-subpage_start_index);
 		if(subpage->length() == 0)
 		{
 			*subpage = "/";

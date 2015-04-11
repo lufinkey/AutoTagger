@@ -155,6 +155,7 @@
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="external\dirent\include\dirent.h" />
     <ClInclude Include="external\iconv\include\iconv.h" />
     <ClInclude Include="external\libxml2++\libxml++config.h" />
     <ClInclude Include="external\libxml2++\libxml++\attribute.h" />
@@ -420,7 +421,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>TAGLIB_NOUTPUT;TAGLIB_STATIC;WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>external/rapidjson/include;external/taglib;external/iconv/include;external/libxml2/include;external/libxml2++;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>external/dirent/include;external/rapidjson/include;external/taglib;external/iconv/include;external/libxml2/include;external/libxml2++;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -439,7 +440,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>TAGLIB_NOUTPUT;TAGLIB_STATIC;WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>external/rapidjson/include;external/taglib;external/iconv/include;external/libxml2/include;external/libxml2++;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>external/dirent/include;external/rapidjson/include;external/taglib;external/iconv/include;external/libxml2/include;external/libxml2++;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

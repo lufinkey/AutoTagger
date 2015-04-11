@@ -148,6 +148,12 @@
     <Filter Include="external\rapidjson\include\rapidjson\internal">
       <UniqueIdentifier>{85c2413c-89c9-4c8e-94e7-7ea1d9ac2727}</UniqueIdentifier>
     </Filter>
+    <Filter Include="external\dirent">
+      <UniqueIdentifier>{83e6c8a6-329b-4b55-b367-ffcfd364d2a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\dirent\include">
+      <UniqueIdentifier>{4a119a19-504d-4f3f-bd3f-1f4dae7c1178}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -1207,6 +1213,9 @@
     </ClInclude>
     <ClInclude Include="src\AutoTagger\Scraper\iTunesLookupScraper.h">
       <Filter>src\AutoTagger\Scraper</Filter>
+    </ClInclude>
+    <ClInclude Include="external\dirent\include\dirent.h">
+      <Filter>external\dirent\include</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
